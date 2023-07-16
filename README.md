@@ -1,0 +1,1 @@
+# ts-next-auth-management

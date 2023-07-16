@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./docker/workspace/Dockerfile
+    container_name: ts-next-auth-management-workspace
+    tty: true
+    volumes:
+      - .:/work/ts-next-auth-management
+      - ts-next-auth-management_node_modules_volume:/work/ts-next-auth-management/node_modules
+    working_dir: /work/ts-next-auth-management
+    ports:
+      - 4000:3000
+
+volumes:
+  ts-next-auth-management_node_modules_volume:
+
+networks:
+  auth-sample-network:
+    external: true

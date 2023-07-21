@@ -3,8 +3,9 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
